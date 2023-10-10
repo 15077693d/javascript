@@ -62,7 +62,6 @@ import type { MountComponentRenderer } from '../ui/Components';
 import { completeSignUpFlow } from '../ui/components/SignUp/util';
 import {
   appendAsQueryParams,
-  appendUrlsAsQueryParams,
   buildURL,
   createBeforeUnloadTracker,
   createCookieHandler,
@@ -1544,7 +1543,7 @@ export default class Clerk implements ClerkInterface {
       return '';
     }
 
-    const opts: RedirectOptions = {
+    const urls: RedirectOptions = {
       afterSignInUrl: pickRedirectionProp('afterSignInUrl', { ctx: options, options: this.#options }, false),
       afterSignUpUrl: pickRedirectionProp('afterSignUpUrl', { ctx: options, options: this.#options }, false),
       redirectUrl: options?.redirectUrl || window.location.href,
@@ -1556,9 +1555,7 @@ export default class Clerk implements ClerkInterface {
       false,
     );
 
-    return this.buildUrlWithAuth(
-      appendUrlsAsQueryParams(appendAsQueryParams(signInOrUpUrl, options?.initialValues || {}), opts),
-    );
+    return this.buildUrlWithAuth(appendAsQueryParams(signInOrUpUrl, { values: options?.initialValues, urls }));
   };
 
   assertComponentsReady(controls: unknown): asserts controls is ReturnType<MountComponentRenderer> {

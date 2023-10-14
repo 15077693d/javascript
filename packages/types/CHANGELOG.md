@@ -1,5 +1,29 @@
 # Change Log
 
+## 3.55.1
+
+### Patch Changes
+
+- Update default organization permissions with a `sys_` prefix as part of the entitlement. This changes makes it easy to distinguish between clerk reserved permissions and custom permissions created by developers. ([#1865](https://github.com/clerkinc/javascript/pull/1865)) by [@mzhong9723](https://github.com/mzhong9723)
+
+- Mark the following SAML related types as stable: ([#1876](https://github.com/clerkinc/javascript/pull/1876)) by [@dimkl](https://github.com/dimkl)
+
+  - `User.samlAccounts`
+  - `SamlAccount`
+  - `UserSettingsResource.saml`
+  - `UserSettingsJSON.saml`
+  - `SamlSettings`
+  - `UserResource.samlAccounts`
+  - `SamlAccountResource`
+  - `SamlStrategy`
+  - `UserJSON.saml_accounts`
+  - `SamlAccountJSON`
+  - `SamlConfig`
+  - `SamlFactor`
+  - `HandleSamlCallbackParams`
+
+- Fix methods in clerk-js that consumede paginated endpoints in order to retrieve single resources. ([#1871](https://github.com/clerkinc/javascript/pull/1871)) by [@panteliselef](https://github.com/panteliselef)
+
 ## 3.55.0
 
 ### Minor Changes

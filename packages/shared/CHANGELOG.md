@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.24.5
+
+### Patch Changes
+
+- Internal updates and improvements, with the only public change that npm should no longer complain about missing `react` peerDependency. ([#1868](https://github.com/clerkinc/javascript/pull/1868)) by [@LekoArts](https://github.com/LekoArts)
+
+  Updates:
+
+  - Remove `@clerk/shared/testUtils` export (which was only used for internal usage)
+  - Add `peerDependenciesMeta` to make `react` peerDep optional
+
 ## 0.24.4
 
 ### Patch Changes

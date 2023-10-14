@@ -1,5 +1,44 @@
 # Change Log
 
+## 4.61.1
+
+### Patch Changes
+
+- Improve accessibility of `<UserButton />` and `<OrganizationSwitcher />` by using `aria-*` attributes (where appropriate) and roles like `menu` and `menuitem`. ([#1826](https://github.com/clerkinc/javascript/pull/1826)) by [@panteliselef](https://github.com/panteliselef)
+
+- Update default organization permissions with a `sys_` prefix as part of the entitlement. This changes makes it easy to distinguish between clerk reserved permissions and custom permissions created by developers. ([#1865](https://github.com/clerkinc/javascript/pull/1865)) by [@mzhong9723](https://github.com/mzhong9723)
+
+- Mark the following SAML related types as stable: ([#1876](https://github.com/clerkinc/javascript/pull/1876)) by [@dimkl](https://github.com/dimkl)
+
+  - `User.samlAccounts`
+  - `SamlAccount`
+  - `UserSettingsResource.saml`
+  - `UserSettingsJSON.saml`
+  - `SamlSettings`
+  - `UserResource.samlAccounts`
+  - `SamlAccountResource`
+  - `SamlStrategy`
+  - `UserJSON.saml_accounts`
+  - `SamlAccountJSON`
+  - `SamlConfig`
+  - `SamlFactor`
+  - `HandleSamlCallbackParams`
+
+- Enforce LTR direction in code inputs ([#1873](https://github.com/clerkinc/javascript/pull/1873)) by [@desiprisg](https://github.com/desiprisg)
+
+- Replace role based check with permission based checks inside the OrganizationSwitcher component. ([#1851](https://github.com/clerkinc/javascript/pull/1851)) by [@panteliselef](https://github.com/panteliselef)
+
+- Replace role based check with permission based checks inside the OrganizationSettings component. ([#1850](https://github.com/clerkinc/javascript/pull/1850)) by [@panteliselef](https://github.com/panteliselef)
+
+- Fix methods in clerk-js that consumede paginated endpoints in order to retrieve single resources. ([#1871](https://github.com/clerkinc/javascript/pull/1871)) by [@panteliselef](https://github.com/panteliselef)
+
+- Replace role based check with permission based checks inside the OrganizationMembers component. ([#1849](https://github.com/clerkinc/javascript/pull/1849)) by [@panteliselef](https://github.com/panteliselef)
+
+- Updated dependencies [[`e38488c92`](https://github.com/clerkinc/javascript/commit/e38488c929e437583296c34cde23f76218f78caf), [`a11f962bc`](https://github.com/clerkinc/javascript/commit/a11f962bcbcf225fb927122267de1e8f5faccf53), [`834dadb36`](https://github.com/clerkinc/javascript/commit/834dadb36c30b2a8f052784de4ad1026b0083b4e), [`70f251007`](https://github.com/clerkinc/javascript/commit/70f2510074352206bbe7bdadf2c28ccf3c074c12)]:
+  - @clerk/types@3.55.1
+  - @clerk/shared@0.24.5
+  - @clerk/localizations@1.26.5
+
 ## 4.61.0
 
 ### Minor Changes

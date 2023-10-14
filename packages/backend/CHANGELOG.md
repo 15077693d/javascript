@@ -1,5 +1,18 @@
 # Change Log
 
+## 0.31.1
+
+### Patch Changes
+
+- Added new function `signJwt(payload, key, options)` for JWT token signing. ([#1786](https://github.com/clerkinc/javascript/pull/1786)) by [@Nikpolik](https://github.com/Nikpolik)
+
+  Also updated the existing `hasValidSignature` and `verifyJwt` method to handle PEM-formatted keys directly (previously they had to be converted to jwks).
+  For key compatibility, support is specifically confined to `RSA` types and formats `jwk, pkcs8, spki`.
+
+- Updated dependencies [[`e38488c92`](https://github.com/clerkinc/javascript/commit/e38488c929e437583296c34cde23f76218f78caf), [`a11f962bc`](https://github.com/clerkinc/javascript/commit/a11f962bcbcf225fb927122267de1e8f5faccf53), [`834dadb36`](https://github.com/clerkinc/javascript/commit/834dadb36c30b2a8f052784de4ad1026b0083b4e), [`70f251007`](https://github.com/clerkinc/javascript/commit/70f2510074352206bbe7bdadf2c28ccf3c074c12)]:
+  - @clerk/types@3.55.1
+  - @clerk/shared@0.24.5
+
 ## 0.31.0
 
 ### Minor Changes
